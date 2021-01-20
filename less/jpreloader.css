@@ -1,0 +1,91 @@
+body {
+	display: none;
+}
+
+#jpreOverlay {
+	background-color: #4E4E4E;
+}
+
+#jpreSlide {
+	font-size  : 18px;
+	font-weight: bold;
+	color      : #ccc;
+	text-align : center;
+	width      : 182px;
+	margin-top : -100px;
+}
+
+#jpreLoader {
+	width     : 182px;
+	height    : 5px;
+	margin-top: 20px;
+}
+
+#jpreBar {
+	border-radius        : 5px;
+	-moz-border-radius   : 5px;
+	-webkit-border-radius: 5px;
+	background-color     : #0FA8A8;
+}
+
+#jprePercentage {
+	width      : 182px;
+	color      : #0FA8A8;
+	font-family: "Gotham";
+	text-align : center;
+	top        : 8px;
+	font-size  : 15px;
+	margin     : auto;
+}
+
+
+
+@-webkit-keyframes progress {
+	from {
+		background-position: 0 0;
+	}
+
+	to {
+		background-position: -60px -60px;
+	}
+}
+
+@-moz-keyframes progress {
+	from {
+		background-position: 0 0;
+	}
+
+	to {
+		background-position: -60px -60px;
+	}
+}
+
+@-ms-keyframes progress {
+	from {
+		background-position: 0 0;
+	}
+
+	to {
+		background-position: -60px -60px;
+	}
+}
+
+@-o-keyframes progress {
+	from {
+		background-position: 0 0;
+	}
+
+	to {
+		background-position: -60px -60px;
+	}
+}
+
+@keyframes progress {
+	from {
+		background-position: 0 0;
+	}
+
+	to {
+		background-position: -60px -60px;
+	}
+}

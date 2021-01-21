@@ -7,12 +7,12 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 }
 
 $(function () {
-		// $('body').jpreLoader({
-		// 	splashID: "#jSplash",
-		// 	loaderVPos: '50%',
-		// 	splashVPos: '50%',
-		// 	autoClose: true
-		// }, function () { });
+		$('body').jpreLoader({
+			splashID: "#jSplash",
+			loaderVPos: '50%',
+			splashVPos: '50%',
+			autoClose: true
+		}, function () { });
 
 	$('.hb a').on('click', function () {
 		$(".hb a").toggleClass("change");

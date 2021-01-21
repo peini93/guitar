@@ -3,7 +3,7 @@ body {
 }
 
 #jpreOverlay {
-	background-color: #4E4E4E;
+	background-color: #e0ded6;
 }
 
 #jpreSlide {
@@ -18,19 +18,19 @@ body {
 #jpreLoader {
 	width     : 182px;
 	height    : 5px;
-	margin-top: 20px;
+	margin-top: -20px;
 }
 
 #jpreBar {
 	border-radius        : 5px;
 	-moz-border-radius   : 5px;
 	-webkit-border-radius: 5px;
-	background-color     : #0FA8A8;
+	background-color     : #7C8F73;
 }
 
 #jprePercentage {
 	width      : 182px;
-	color      : #0FA8A8;
+	color      : #7C8F73;
 	font-family: "Gotham";
 	text-align : center;
 	top        : 8px;

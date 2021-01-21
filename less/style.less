@@ -20,12 +20,11 @@
 @w   : 1000px;
 @bg_g: #f9f8f7;
 @bg_green: #e0ded6;
+@bg_gg:#7C8F73;
 @text_color:#4B2615;
 @url        : "../img/";
 @font : 'Noto Sans TC',
 sans-serif;
-
-
 
 html,
 body {
@@ -36,6 +35,8 @@ body {
     height     : 100%;
 }
 
+
+
 .contact{
     position: fixed;
     right: 0;
@@ -44,7 +45,11 @@ body {
     height: 321px;
     background: url("@{url}tag@2x.png") no-repeat;
     background-size: 100% auto;
+    z-index: 100;
     cursor: pointer;
+    @media only screen and (max-width : 960px) {
+       display: none;
+    }
     & p{
         width: 18px;
         color: #fff;
@@ -63,15 +68,130 @@ body {
     margin          : auto;
     background-color: @bg_g;
     position: relative;
+     @media only screen and (max-width : 960px) {
+        width: 100%;
+        height: 80px;
+    }
     & .logo{
         width: 340px;
         position: absolute;
         top:50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        @media only screen and (max-width : 960px) {
+            width: 50%;
+        }
         & img{
             width: 100%;
             display: block;
+        }
+    }
+}
+
+.hb {
+    float  : right;
+    z-index: 1000;
+    display: none;
+
+    @media only screen and (max-width : 960px) {
+        display: block;
+    }
+
+    & a {
+        box-sizing: border-box;
+        display   : block;
+        width     : 35px;
+        height    : 35px;
+        margin    : 40px 20px 0 0;
+
+        & span {
+            width           : 35px;
+            height          : 4px;
+            border-radius   : 4px;
+            background-color: @bg_gg;
+            display         : block;
+            transition      : (0.3s);
+
+            &::before {
+                content         : "";
+                display         : block;
+                position        : absolute;
+                margin-top      : 13px;
+                width           : 35px;
+                height          : 4px;
+                border-radius   : 4px;
+                background-color: @bg_gg;
+                transition      : (0.3s);
+            }
+
+            &::after {
+                content         : "";
+                display         : block;
+                position        : absolute;
+                margin-top      : -13px;
+                width           : 35px;
+                height          : 4px;
+                border-radius   : 4px;
+                background-color: @bg_gg;
+                transition      : (0.3s);
+            }
+        }
+    }
+
+    & .change span {
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    & .change span::before {
+        margin-top: 0;
+        transition: (0.3s);
+        rotate    : (-45deg);
+        .transform(-45deg);
+    }
+
+    & .change span::after {
+        margin-top: 0;
+        transition: (0.3s);
+        .transform(45deg);
+    }
+}
+
+.m_m {
+    position  : fixed;
+    width     : 100%;
+    height    : 100%;
+    z-index   : 12;
+    background: rgba(0%, 0%, 0%, 0.8);
+    top       : 80px;
+    right     : 0;
+    display   : none;
+
+    & ul {
+        width           : 300px;
+        height          : 100%;
+        background-color: @bg_gg;
+        margin-left     : 40%;
+
+        & li {
+            padding: 12% 0 0 30%;
+        }
+
+        & li a {
+            width          : 60%;
+            display        : block;
+            color          : #fff;
+            text-decoration: none;
+            margin         : 0;
+
+            &::after {
+                content         : "";
+                display         : block;
+                width           : 35px;
+                height          : 4px;
+                border-radius   : 4px;
+                background-color:@bg_green;
+                margin-top      : 10px;
+            }
         }
     }
 }
@@ -82,8 +202,10 @@ body {
     margin          : auto;
     background-color: @bg_green;
     font-size: 18px;
+    @media only screen and (max-width : 960px) {
+        display: none;
+    }
    
-
     & ul{
         display    : flex;
         flex-wrap  : wrap;
@@ -117,6 +239,10 @@ body {
     width : @w;
     height: 480px;
     margin: auto;
+    @media only screen and (max-width : 960px) {
+        width: 100%;
+        height: auto;
+    }
 }
 
 .movie {
@@ -125,6 +251,9 @@ body {
     margin: 20px auto;
     background-color: @bg_green;
     position: relative;
+     @media only screen and (max-width : 960px) {
+        width: 100%;
+    }
     & .box{
         width: 960px;
         height: 160px;
@@ -133,6 +262,9 @@ body {
         top:50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        @media only screen and (max-width : 960px) {
+             width: 95%;
+         }
     }
 }
 
@@ -145,6 +277,10 @@ body {
     flex-wrap  : wrap;
     justify-content:center;
     color: @text_color;
+    @media only screen and (max-width : 960px) {
+        width: 100%;
+        height: auto;
+    }
 
     & div{
         margin-top: 20px;
@@ -167,6 +303,11 @@ body {
         font-size: 18px;
         margin-left: 70px;
         margin-right: 50px;
+         @media only screen and (max-width : 960px) {
+            font-size: 15px;
+            margin-left: 10px;
+            margin-right: 0px;
+        }
         & p{
             margin: 10px;
         }
@@ -184,6 +325,10 @@ body {
     & div:nth-child(3){
         height: 120px;
         line-height: 160px;
+        @media only screen and (max-width : 960px) {
+            height: 60px;
+            line-height: 60px;
+        }
 
         & a{
             text-decoration: none;
@@ -208,15 +353,23 @@ body {
     text-align: center;
     color: @text_color;
     font-size: 12px;
+     @media only screen and (max-width : 960px) {
+        width: 100%;
+    }
 }
 
 .swiper-container,.swiper-container-a {
-    width : 100%;
+    width : @w;
     height: 100%;
     position: relative;
+    @media only screen and (max-width : 960px) {
+        width: 100%;
+        height: auto;
+    }
 }
 
 .swiper-slide {
+    width : @w;
     text-align: center;
     font-size : 12px;
     background: @bg_green;
@@ -235,10 +388,18 @@ body {
         color:@text_color;
         line-height: 14px;
     }
+
+    & img{
+        width: 100%;
+        display: block;  
+    }
+    @media only screen and (max-width : 960px) {
+        width: 100%;
+    }
 }
 
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
-    background-color: @text_color;
+    background-color: @bg_gg;
 }
 
 .swiper-button-prev{

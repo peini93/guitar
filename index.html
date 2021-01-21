@@ -12,7 +12,7 @@
     <meta property="og:image" content="img/" />
     <meta property="og:url" content="" />
     <title>森韻木吉他工作室，嘉義吉他教學</title>
-    <link rel="stylesheet" href="less/swiper-bundle.min.css">
+    <link rel="stylesheet" href="less/swiper-bundle.css">
     <link rel="stylesheet" href="less/style.css" />
     <link rel="stylesheet/less" type="text/css" href="less/style.less" />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
@@ -26,6 +26,24 @@
     <div class="tittle">
         <div class="logo">
             <img src="img/logo@2x.png">
+        </div>
+        <div class="hb">
+            <a href="javascript:;">
+                <span></span>
+            </a>
+            <div class="m_m">
+                <ul>
+                    <li><a href="javascript:;" title="關於森韻">關於森韻</a></li>
+                    <li><a href="javascript:;" title="最新消息">最新消息</a></li>
+                    <li><a href="javascript:;" title="師資介紹">師資介紹</a></li>
+                    <li><a href="javascript:;" title="課程資訊">課程資訊</a></li>
+                    <li><a href="javascript:;" title="精選文章">精選文章</a></li>
+                    <li><a href="javascript:;" title="商品資訊">商品資訊</a></li>
+                    <li><a href="javascript:;" title="聯絡我們">聯絡我們</a></li>
+                    <li><a href="javascript:;" title="立即報名課程">立即報名課程</a></li>
+                    <li><a href="javascript:;" title="回首頁">回首頁</a></li>
+                </ul>
+            </div>
         </div>
     </div>
     <div class="menu">
@@ -57,15 +75,8 @@
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide"><img src="img/kv1000x480.jpg"></div>
-                <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div>
-                <div class="swiper-slide">Slide 4</div>
-                <div class="swiper-slide">Slide 5</div>
-                <div class="swiper-slide">Slide 6</div>
-                <div class="swiper-slide">Slide 7</div>
-                <div class="swiper-slide">Slide 8</div>
-                <div class="swiper-slide">Slide 9</div>
-                <div class="swiper-slide">Slide 10</div>
+                <div class="swiper-slide"><img src="img/kv1000x480.jpg"></div>
+                <div class="swiper-slide"><img src="img/kv1000x480.jpg"></div>
             </div>
             <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
@@ -147,11 +158,10 @@
 <script src="js/lib/jquery-1.11.0.min.js"></script>
 <script src="js/lib/TweenMax.min.js"></script>
 <script src="js/lib/jpreloader.min.js"></script>
-<script src="js/swiper-bundle.min.js"></script>
+<script src="js/swiper-bundle.js"></script>
 <script>
     var swiper = new Swiper('.swiper-container', {
         loop: true,
-        loopFillGroupWithBlank: true,
         pagination: {
             el: '.swiper-pagination',
             type: 'progressbar',
@@ -179,6 +189,6 @@
     });
 </script>
 <script src="js/less.js"></script>
-<!-- <script src="js/moon.js"></script> -->
+<script src="js/moon.js"></script>
 
 </html>

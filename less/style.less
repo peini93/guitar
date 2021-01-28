@@ -349,6 +349,13 @@ body {
         width     : 110px;
         text-align: center;
         font-size : 12px;
+        @media only screen and (max-width : 960px) {
+        width     : 80px;
+    }
+
+     @media only screen and (max-width : 320px) {
+            width     : 60px;
+        }
 
         & img {
             width  : 100%;
@@ -366,9 +373,13 @@ body {
         margin-right: 50px;
 
         @media only screen and (max-width : 960px) {
-            font-size   : 15px;
-            margin-left : 10px;
+            font-size   : 13px;
+            margin-left : 0px;
             margin-right: 0px;
+        }
+
+        @media only screen and (max-width : 320px) {
+            font-size   : 12px;
         }
 
         & p {
@@ -389,10 +400,8 @@ body {
     & div:nth-child(3) {
         height     : 120px;
         line-height: 160px;
-
         @media only screen and (max-width : 960px) {
-            height     : 60px;
-            line-height: 60px;
+            width: 30px;
         }
 
         & a {
@@ -400,9 +409,27 @@ body {
             transition     : (0.5s);
             margin-left    : 20px;
             margin-top     : 50px;
+            
+            @media only screen and (max-width : 960px) {
+            width: 30px;
+            margin-top     : 5px;
+            margin-left    : 10px;
+            display: block;
+        }
+
+        @media only screen and (max-width : 320px) {
+            margin-left    : 0px;
+        }
 
             &:hover {
                 opacity: 0.6;
+            }
+
+            & img{
+                 @media only screen and (max-width : 960px) {
+                     width: 100%;
+                    display: block;
+                }   
             }
         }
 
@@ -627,6 +654,60 @@ body {
     & .form{
         width: 90%;
         margin:auto;
+    }
+
+    & .prolist{
+        width: 100%;
+        display         : flex;
+        flex-wrap       : wrap;
+        justify-content : center;
+        margin-top: 40px;
+
+        & .probox{
+            width: 230px;
+            margin-bottom: 20px;
+            @media only screen and (max-width : 960px) {
+            width: 150px;
+         }
+            & a{
+                text-align: center;
+                color: @text_color;
+                text-decoration: none; 
+                &:hover{
+                    text-decoration: underline;
+                }              
+            }
+
+            & a .proimg{
+                width: 200px;
+                height: 200px;
+                margin: auto;
+                border-radius:200px;
+                overflow: hidden;
+                border:solid 3px #ac8700 ;
+                @media only screen and (max-width : 960px) {
+                 width: 120px;
+                 height: 120px;
+                 border-radius:120px;
+                }
+            }
+
+            & a .proimg img{
+                 width     :100%;
+                 display: block;
+                 transition: (0.5s);
+            }
+
+            & a:hover .proimg img{
+                 width     : 110%;
+                 margin-top: -5%;
+                 margin-left: -5%;
+            }
+
+            & a p{
+                margin-top: 10px;
+            }
+        }
     }
 }
 
